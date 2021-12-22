@@ -1,0 +1,448 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+:root {
+  --seCol: #00dbde;
+  --fsCol: #fc00ff;
+  --thCol: rgba(36, 128, 167, 1);
+  --bg: rgba(0, 0, 0);
+  scroll-behavior: smooth;
+  /* --bg:white;
+    --fsCol:#c6ffdd;
+    --seCol:#fbd786;
+    --thCol:#f7797d; */
+}
+::selection {
+  background-color: white;
+  color: black;
+}
+::placeholder{
+  color:var(--thCol);
+  background-color: var(--bg);
+}
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: linear-gradient(to bottom ,var(--bg),var(--seCol))
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  border-top: 40px solid  rgb(12, 92, 88) /*or any height and color you want*/
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+
+}
+
+body {
+  background-color: var(--bg);
+  font-family: Verdana, sans-serif;
+  /* background-color: white */
+}
+
+
+/**************************************************** general  ****************************/
+
+.textTheme {
+  width: fit-content;
+  background: linear-gradient(to right, var(--fsCol), var(--seCol));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.badge {
+  padding:5px;
+  display: inline-block;
+  box-shadow: 2px 1px 3px var(--seCol);
+  border: 2px solid transparent;
+  border-radius: 0px;
+  border-bottom-right-radius: 5px;
+  /* border-bottom-left-radius: 50px; */
+  color: var(--thCol);
+  /* background-color: coral; */
+  font-size: 14px;
+}
+.alignClass {
+  transform: translate(-50%, -50%);
+}
+/* ********************************************************************************************* */
+.brief {
+  width: 40vw;
+  height: 40vw;
+  padding: 10px;
+  background-color: rgba(151, 86, 86, 0.145);
+  background-color: black;
+  /* background-image: url("./index.png");
+    background-position: center center;
+    background-size: cobver;
+    background-repeat: no-repeat; */
+}
+
+.briefEx {
+  height: 100%;
+  margin: 20px auto;
+  font-size: 15px;
+  -webkit-backdrop-filter: blur(0.5rem);
+  backdrop-filter: blur(0.5rem);
+}
+
+
+/******************NAv Stuff********************/
+.nav-link {
+  display: block;
+  width: fit-content;
+  background: linear-gradient(
+    to right,
+    var(--fsCol),
+    var(--fsCol),
+    var(--seCol)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-right: 10px;
+}
+nav li:hover,.mailShowBtn:hover {
+  border: 2px solid transparent;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: -3px 2px 8px var(--seCol);
+  transition: box-shadow 0.5s ease-out;
+}
+
+nav li:hover a.nav-link {
+  color: turquoise;
+}
+a.nav-link {
+  font-size: 1.25rem;
+}
+/* for jquery */
+.leftNav li {
+  display: none;
+}
+/************************* personal container *************************************************/
+
+.personCon {
+  border: 2px solid transparent;
+  border-top-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  background-color: var(--bg);
+  height: 400px;
+  width: 100%;
+  overflow: hidden;
+  transition: box-shadow 1s ease-out;
+  box-shadow: -3px 2px 8px var(--seCol);
+  display: none;
+}
+.personCon img {
+display: none;
+}
+#job{
+  transition:all, 1s ease;
+}
+
+/* .persoCONN::before {
+  position: absolute;
+  content: " ";
+  width:0px;
+  height: 100%;
+  background-color:#f8f1f1a6;
+  top:0px;
+  transition: 1s ease-in;
+  right:0px;
+  width: 100%;
+  transition: width,3s ease-in;
+} */
+/* .personCon:hover::before {
+width: 100%;
+
+}
+.personCon::after {
+  width: 100%;
+  z-index: -2;
+} */
+
+#myIntro{
+opacity: 0;
+ transition: opacity, 1s ease-in-out;
+}
+/* #myIntro:hover{
+  opacity: 1;
+
+} */
+/* ******************************************************************************************* */
+.myName span {
+  display: inline-block;
+  color: white;
+  font-size: 70px;
+  position: inherit;
+  width: fit-content;
+  background: linear-gradient(to right, var(--fsCol), var(--seCol));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  display: none;
+  /* position: absolute;
+    top:0px;
+    left: 0px; */
+  /* margin-right: 40%;
+    */
+}
+.myName span:nth-child(1) {
+  top: -220px;
+  left: 0px;
+}
+.myName span:nth-child(3) {
+  top: -220px;
+  left: 47%;
+}
+
+.myName span:nth-child(5) {
+  top: -220px;
+  left: 93%;
+}
+
+.myName span:nth-child(2) {
+  top: 10px;
+  left: 20%;
+}
+.myName span:nth-child(4) {
+ top: 10px;
+  left: 70%;
+}
+/* .myName span:hover{
+  color: coral;
+  transform: rotateZ(90deg);
+} */
+/* **********************************************************************************************/
+/* for jquery */
+#logo {
+  display: none;
+}
+/* *******************************************Resume*************************************************** */
+#resume h1:hover a{
+  color:var(--fsCol)
+}
+
+.Ritems {
+  box-shadow: 3px 1px 8px var(--fsCol);
+  border: 2px solid transparent;
+  border-top-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+.Ritems li {
+  cursor: pointer;
+}
+.Ritems li i {
+  color: var(--seCol);
+}
+.Ritems li:hover {
+  width: 100%;
+  color: var(--fsCol);
+  box-shadow: 1px 1px 7px var(--fsCol);
+  transition: box-shadow 0.5s ease-out;
+}
+/* } hoveredItem */
+.showWhichSection{
+  width: 100%;
+  color: var(--seCol);
+  box-shadow: 1px 1px 7px var(--fsCol);
+}
+.RitemsEx {
+  height: 100%;
+} 
+.RitemsEx > div {
+  background-color: black;
+}
+/* .RitemsEx > div::-webkit-scrollbar {
+  display: none;
+} */
+.RitemsEx li {
+  background-color: var(--bg);
+}
+.RitemsEx li h6::before {
+  content: "•";
+  display: inline-block;
+  margin-right: 10px;
+  color: var(--seCol);
+  font-size: 20px;
+}
+.RitemsEx li:hover h6 {
+  text-shadow: 0px 0px 1px white;
+}
+
+.RitemsEx li > span a {
+  color: var(--thCol);
+}
+.RitemsEx li > .text > p {
+  text-transform: capitalize;
+  padding-left: 30px;
+  font-size: 13px;
+  color: var(--thCol);
+}
+.mailBox{
+  /* width:70%; */
+  height:fit-content;
+  /* box-shadow: 3px 2px 8px var(--seCol),-3px -2px 8px var(--thCol);
+  border: 2px solid transparent;
+  border-radius: 0px;
+  border-top-right-radius: 30px;
+  border-bottom-left-radius: 30px; */
+}
+.mailShowBtn{
+  padding: 3px;
+}
+form{
+  width:100%;
+  height: 100%;
+  padding:1px;
+
+
+  color: var(--thCol);
+
+
+  background-image:
+  linear-gradient(to right, var(--bg),var(--bg)), 
+  linear-gradient(to left top,var(--thCol),var(--thCol) );
+  
+  background-origin: border-box,border-box;
+  background-clip: content-box,border-box;
+  border: 2px solid transparent;
+  border-radius: 0px;
+  border-top-right-radius: 30px; 
+ border-bottom-left-radius: 30px;
+
+}
+.mailBtn span ,.mailBtn{
+ background-color: var(--bg);
+ border:none;
+}
+
+form span {
+  font-size: 30px  ;
+}
+
+/* textarea:focus, input:active ,input#myMail:focus ,input-group{
+  outline: none;
+  outline-width: 0;
+  border: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+} */
+form input:hover,input#myMail:focus ,input#myMsg:focus  {
+  box-shadow: 0px 2px 1px var(--thCol);
+}
+.progress-bar{
+  background: linear-gradient(to left, var(--seCol),var(--thCol), var(--fsCol));
+
+}
+
+#projectsSec >.container > div >.card{
+  padding:0px 0px 15px 0px;
+  height: 300px;
+  border: 2px solid transparent;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-color: var(--bg);
+  overflow: hidden;
+  transition: box-shadow 1s ease-out;
+  box-shadow: -3px 2px 5px var(--thCol);
+  resize:vertical;
+}
+video.card{
+  background-color: var(--bg);
+
+}
+
+.attachDes{
+  background-color: black;
+} 
+.attachDes a{
+  color: var(--thCol);
+} 
+.attachDes p{
+  color: var(--thCol);
+  padding-top: 13px;
+  font-size: 13px;
+} 
+
+#sideText{
+  writing-mode: tb-rl; 
+  height:60%;      
+  position: absolute;
+  padding: 2em;
+  right: 1%;
+  top: 30%;
+  }
+
+#sideText i{
+  font-size: 30px;
+  margin: 10px 0px;
+}
+
+#contactSec i {
+  font-size: 20px;
+}
+/*********************************************** screens ***************************************/
+@media (min-width: 768px) {
+  form span.fm{
+  font-size: 20px;
+}
+.content{
+  height: 70%;
+}
+.RitemsEx > div{
+  height: 70%;
+}
+}
+@media (max-width: 768px) {
+  .personCon {
+    margin: auto;
+    height: 200px;
+    width: 200px;
+    border: 2px solid transparent;
+    border-radius: 100%;
+    overflow: hidden;
+  }
+  .Ritems h6 {
+    display: none;
+  }
+  .Ritems h6 {
+    font-size: 12px;
+  }
+  .intro {
+    -webkit-backdrop-filter: blur(0.2em);
+    backdrop-filter: blur(0.2rem);
+  }
+  .myName span {
+    font-size: 20px;
+  }
+form span.fm {
+    font-size: 15px;
+    }
+    .content{
+      height: 90%;
+    }
+ 
+    .RitemsEx > div{
+      height: 60%;
+    }
+    .badge{
+      width: fit-content;
+      padding: 5px 0px;
+      margin: 10px auto;
+      margin-bottom: 0px;
+    }
+}
+/**********************************************************************************************/

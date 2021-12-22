@@ -1,0 +1,26 @@
+#res,#contact,#projects{
+    width: 88%;
+    transition: 1s;
+    transform: perspective(10000px) rotateX(50deg);
+
+}
+
+
+
+#res span ,#contact span ,#projects span{
+    display: inline-block;
+    font-size: 70px;
+    box-shadow: 10px 20px 30px rgba(0, 0, 0, 0.592);
+    /* text-shadow: 3px 2px 3px violet; */
+    background: linear-gradient(to right, var(--fsCol), var(--thCol),var(--seCol));
+    /* background-clip: text;
+    -webkit-background-clip: text; */
+    color: var(--bg);
+    padding: 0px 20px;
+    }
+    #res span:not(:last-child) {
+    
+    }
+    #res span:nth-child(2n),#contact span:nth-child(2n), #projects span:nth-child(2n){
+    transform: skewY(-20deg);
+    }
