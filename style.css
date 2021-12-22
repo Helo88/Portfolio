@@ -149,7 +149,8 @@ a.nav-link {
 display: none;
 }
 #job{
-  transition:all, 1s ease;
+  opacity: 0;
+  transition:display, 2s ease;
 }
 
 /* .persoCONN::before {
@@ -214,11 +215,11 @@ opacity: 0;
 }
 
 .myName span:nth-child(2) {
-  top: 10px;
+  top:2%;
   left: 20%;
 }
 .myName span:nth-child(4) {
- top: 10px;
+ top: 2%;
   left: 70%;
 }
 /* .myName span:hover{
@@ -256,8 +257,8 @@ opacity: 0;
 /* } hoveredItem */
 .showWhichSection{
   width: 100%;
-  color: var(--seCol);
-  box-shadow: 1px 1px 7px var(--fsCol);
+  color: var(--thCol);
+  box-shadow: 1px 1px 7px var(--thCol);
 }
 .RitemsEx {
   height: 100%;
@@ -328,7 +329,9 @@ form{
  background-color: var(--bg);
  border:none;
 }
-
+.mailBtn a{
+  font-size: 30px;
+}
 form span {
   font-size: 30px  ;
 }
@@ -393,6 +396,9 @@ video.card{
 
 #contactSec i {
   font-size: 20px;
+}
+#contactSec li:hover {
+  text-shadow: 0px 0px 1px white;
 }
 /*********************************************** screens ***************************************/
 @media (min-width: 768px) {
