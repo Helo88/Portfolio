@@ -5,7 +5,7 @@ $(document).ready(function () {
             $("img").css({"transform":"skewX(90deg)translate(80px,-400px)","transition":"1s ease-in-out"})
             $("#welcome").css({"transform":"skewY(-150deg)translateY(-500px)","transition":"1s ease-in-out"})
            setTimeout(()=>{ 
-               window.location.href="./in.html"
+               window.location="./in.html"
             },800)
     
         },2000)
