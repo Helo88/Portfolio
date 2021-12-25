@@ -65,6 +65,7 @@ body {
   padding:5px;
   display: inline-block;
   box-shadow: 2px 1px 3px var(--seCol);
+
   border: 2px solid transparent;
   border-radius: 0px;
   border-bottom-right-radius: 5px;
@@ -409,7 +410,10 @@ video.card{
   height: 70%;
 }
 .RitemsEx > div{
-  height: 70%;
+  height: 80%;
+}
+#resumeSec{
+  height: 600px;
 }
 }
 @media (max-width: 768px) {
@@ -420,6 +424,9 @@ video.card{
     border: 2px solid transparent;
     border-radius: 100%;
     overflow: hidden;
+  }
+  #resumeSec{
+    height: 750px;
   }
   .Ritems h6 {
     display: none;
