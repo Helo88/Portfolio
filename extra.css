@@ -1,8 +1,8 @@
 :root {
   --seCol: #00dbde;
   --fsCol: #fc00ff;
-  --thCol: rgba(36, 128, 167, 1);
-  --bg: black;
+  --thCol: rgba(36, 128, 167, 1); 
+  /* --bg: black; */
 }
 
 #res,

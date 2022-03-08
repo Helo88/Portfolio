@@ -1,8 +1,38 @@
 // alert("kcksklckl")
 $(document).ready(function () {
-  console.log("jellli");
-  // $(".briefEx").toggleClass("myFade");
+  console.log("jquery starts");
+  $('.row3').css('display','none')
+  $('.row4').css('display','none')
+  $('.row5').css('display','none')
+  $('#pagi1').addClass('active')
 
+$('#pagi1').on('click',function(){
+  $('.row3').css('display','none')
+  $('.row4').css('display','none')
+  $('.row5').css('display','none')
+  $('.row1').css({'class':'row p-2 mt-3','display':'flex'})
+  $('.row2').css({'class':'row p-2 mt-3','display':'flex'})
+  $('a').removeClass('active')
+  $(this).addClass('active')
+})
+$('#pagi2').on('click',function(){
+  $('.row3').css({'class':'row p-2 mt-3','display':'flex'})
+  $('.row4').css({'class':'row p-2 mt-3','display':'flex'})
+  $('.row5').css('display','none')
+  $('.row1').css('display','none')
+  $('.row2').css('display','none')
+  $('a').removeClass('active')
+  $(this).addClass('active')
+})
+$('#pagi3').on('click',function(){
+  $('.row3').css('display','none')
+  $('.row4').css('display','none')
+  $('.row5').css({'class':'row p-2 mt-3','display':'flex'})
+  $('.row1').css('display','none')
+  $('.row2').css('display','none')
+  $('a').removeClass('active')
+  $(this).addClass('active')
+})
   $(window).on("load", function () {
     $("#logo").fadeToggle(1000, () => {
       $("#myIntro").show(1000, function () {
@@ -21,10 +51,6 @@ $(document).ready(function () {
               })();
             });
           }, 1000);
-          //   window.setTimeout(()=>{
-          //     $("#job").css("opacity","1")
-
-          // },1000)
         });
       });
     });
@@ -43,18 +69,19 @@ $(document).ready(function () {
       }
     });
   });
+
   $("#eduBtn").on("click", function () {
     $(".RitemsEx div").eq(0).css("z-index", "2000");
     $(".Ritems li").eq(0).addClass("showWhichSection");
   });
 
-  $(".RitemsEx > div").on("mouseenter", function () {
-    //   console.log("hovered section ", $(".Ritems li").eq($(this).index()).text())
+  $(".RitemsEx > div").on("mouseover", function () {
+    
 
     $(".Ritems li").eq($(this).index()).addClass("showWhichSection");
   });
   $(".RitemsEx div").on("mouseleave", function () {
-    // console.log("hovered section ", $(".Ritems li").eq($(this).index()).text())
+    
     console.log("hittt");
     $(".Ritems li").eq($(this).index()).removeClass("showWhichSection");
   });
@@ -75,6 +102,5 @@ function lo() {
     .each(function () {
       $(this).show(2000);
 
-      // console.log("child"+ $(this).innerText)
     });
 }

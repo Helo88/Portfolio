@@ -6,16 +6,18 @@
 }
 
 :root {
-  --seCol: #00dbde;
-  --fsCol: #fc00ff;
-  --thCol: rgba(36, 128, 167, 1);
+
   --bg: rgba(0, 0, 0);
   scroll-behavior: smooth;
-  /* --bg:white;
+    /* --bg:white;
     --fsCol:#c6ffdd;
     --seCol:#fbd786;
     --thCol:#f7797d; */
 }
+
+/* #c31432
+→ 
+#240b36 */
 ::selection {
   background-color: white;
   color: black;
@@ -65,6 +67,7 @@ body {
   padding:5px;
   display: inline-block;
   box-shadow: 2px 1px 3px var(--seCol);
+
   border: 2px solid transparent;
   border-radius: 0px;
   border-bottom-right-radius: 5px;
@@ -113,7 +116,7 @@ body {
   color: transparent;
   margin-right: 10px;
 }
-nav li:hover,.mailShowBtn:hover {
+nav li:hover,.mailShowBtn:hover,#moreProj:hover {
   border: 2px solid transparent;
   border-top-left-radius: 20px;
   border-bottom-right-radius: 20px;
@@ -121,8 +124,10 @@ nav li:hover,.mailShowBtn:hover {
   transition: box-shadow 0.5s ease-out;
 }
 
-nav li:hover a.nav-link {
+nav li:hover a.nav-link ,#moreProj:hover
+ {
   color: turquoise;
+  
 }
 a.nav-link {
   font-size: 1.25rem;
@@ -139,7 +144,7 @@ a.nav-link {
   border-bottom-right-radius: 50px;
   background-color: var(--bg);
   height: 400px;
-  width: 100%;
+  width: 250px;
   overflow: hidden;
   transition: box-shadow 1s ease-out;
   box-shadow: -3px 2px 8px var(--seCol);
@@ -249,7 +254,7 @@ opacity: 0;
   color: var(--seCol);
 }
 .Ritems li:hover {
-  width: 100%;
+  /* width: 100%; */
   color: var(--fsCol);
   box-shadow: 1px 1px 7px var(--fsCol);
   transition: box-shadow 0.5s ease-out;
@@ -347,8 +352,8 @@ form input:hover,input#myMail:focus ,input#myMsg:focus  {
   box-shadow: 0px 2px 1px var(--thCol);
 }
 .progress-bar{
-  background: linear-gradient(to left, var(--seCol),var(--thCol), var(--fsCol));
-
+  /* background: linear-gradient(to left, var(--seCol),var(--thCol), var(--fsCol)); */
+  background: linear-gradient(to right, white 2%,var(--thCol));
 }
 
 #projectsSec >.container > div >.card{
@@ -382,23 +387,34 @@ video.card{
 
 #sideText{
   writing-mode: tb-rl; 
-  height:60%;      
+  height:70%;      
   position: absolute;
   padding: 2em;
   right: 1%;
-  top: 30%;
+  top: 15%;
   }
 
 #sideText i{
   font-size: 30px;
   margin: 10px 0px;
 }
-
+.page-link{
+  color: var(--fsCol);
+  margin-right: 20px;
+}
+ .active{
+  background-color: var(--thCol);
+  border:none
+}
+/* ******************* */
 #contactSec i {
   font-size: 20px;
 }
 #contactSec li:hover {
   text-shadow: 0px 0px 1px white;
+}
+#moreProj{
+  font-size: 20px;
 }
 /*********************************************** screens ***************************************/
 @media (min-width: 768px) {
@@ -409,7 +425,13 @@ video.card{
   height: 70%;
 }
 .RitemsEx > div{
-  height: 70%;
+  height: 80%;
+}
+#resumeSec{
+  height: 600px;
+}
+.Ritems li:hover{
+  width: 100%;
 }
 }
 @media (max-width: 768px) {
@@ -421,11 +443,17 @@ video.card{
     border-radius: 100%;
     overflow: hidden;
   }
+  #resumeSec{
+    height: 750px;
+  }
   .Ritems h6 {
     display: none;
   }
   .Ritems h6 {
     font-size: 12px;
+  }
+  .Ritems li:hover{
+    width: fit-content
   }
   .intro {
     -webkit-backdrop-filter: blur(0.2em);
